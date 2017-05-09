@@ -1,0 +1,34 @@
+html {
+	font-size: 62.5%;
+}
+
+body {
+	//color: $color-black;
+}
+
+main {
+	&.no-scroll {
+		max-height: 0;
+		overflow: hidden;
+	}
+	padding-top: $header-height;
+	min-height: calc(100vh - #{$footer-height});
+}
+
+footer{height: 27rem;}
+
+.row{
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.page-header__hidden{display:none;}
+
+.img-full{
+	width: 100%;
+	margin-top: 2rem;
+}
+
+.content-block--pt0{ padding-top: 0 !important;}
+
+.content-block--pb0{ padding-bottom: 0 !important;}
