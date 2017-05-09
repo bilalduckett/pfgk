@@ -1,0 +1,28 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+		{#<section class="masthead" style="background-image: url({{ post.thumbnail.src('medium-large') }})">#}
+		<section class="masthead" style="background-image: url('{{TimberImage(post.get_field('background_image')).src}}')">
+			<div class="container">
+				<div class="row align-items-end">
+					<h1 class="page-header {{ post.has_image_title ? 'page-header__hidden' : '' }}">{{ post.title }}</h1>
+				</div>
+			</div>
+		</section>
+
+		{#<section>#}
+		{#<div class="container">#}
+		{#<div class="row flex-items-xs-center">#}
+		{#<div class="col-sm-8">#}
+		{#{{ post.content }}#}
+		{#</div>#}
+		{#</div>#}
+		{#</div>#}
+		{#</section>#}
+
+		{% include "page-modules.twig" %}
+
+	</article>
+{% endblock %}

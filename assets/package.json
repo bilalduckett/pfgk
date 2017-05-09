@@ -1,0 +1,19 @@
+{
+  "name": "prime-focus-goalkeeping",
+  "version": "1.0.0",
+  "description": "Custom Wordpress / Timber / WooCommerce theme",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bilalduckett/pfgk.git"
+  },
+  "author": "@bilalduckett <bilalduckett@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bilalduckett/pfgk/issues"
+  },
+  "homepage": "https://github.com/bilalduckett/pfgk#readme"
+}

@@ -1,0 +1,48 @@
+{#{% for item in post.get_field('modules') %}#}
+
+	{#{% if item.layout == "Title" %}#}
+		{#{% include "modules/title.twig" with {'item': item} %}#}
+	{#{% endif %}#}
+
+	{#{% if item.layout == "3-Column" %}#}
+		{#{% include "modules/three-column.twig" with {'item': item} %}#}
+	{#{% endif %}#}
+
+	{#{% if item.layout == "Impact Quote" %}#}
+		{#{% include "modules/impact-quote.twig" with {'item': item} %}#}
+	{#{% endif %}#}
+
+	{#{% if item.layout == "Arbitrary Content" %}#}
+		{#{% include "modules/arbitrary-content.twig" with {'item': item} %}#}
+	{#{% endif %}#}
+
+	{#{% if item.layout == "Bio" %}#}
+		{#{% include "modules/bio.twig" with {'item': item} %}#}
+	{#{% endif %}#}
+
+	{#{% if item.layout == "Definition Graphic" %}#}
+		{#{% include "modules/definition-graphic.twig" with {'item': item} %}#}
+	{#{% endif %}#}
+
+	{#{% if item.layout == "Image Left" %}#}
+		{#{% include "modules/image-left.twig" with {'item': item} %}#}
+	{#{% endif %}#}
+
+	{#{% if item.layout == "Image Right" %}#}
+		{#{% include "modules/image-right.twig" with {'item': item} %}#}
+	{#{% endif %}#}
+
+    {#{% if item.layout == "Testimonial" %}#}
+        {#{% include "modules/testimonial.twig" with {'item' : item} %}#}
+    {#{% endif %}#}
+
+    {#{% if item.layout == "Info Graphic Stacked" %}#}
+        {#{% include "modules/info-graphic-stacked.twig" with {'item' : item} %}#}
+    {#{% endif %}#}
+
+    {#{% if item.layout == "Carousel" %}#}
+        {#{% include "modules/carousel.twig" with {'item' : item} %}#}
+    {#{% endif %}#}
+
+
+{#{% endfor %}#}
