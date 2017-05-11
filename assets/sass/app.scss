@@ -1,6 +1,8 @@
 //bootstrap
 @import "vendor/bootstrap-variables";
 @import "vendor/bootstrap";
+@import "vendor/hamburger-settings";
+@import "../node_modules/hamburgers/_sass/hamburgers/hamburgers";
 
 //utility
 @import "utility/mq";
@@ -18,8 +20,10 @@
 @import "partials/footer";
 
 //Components
+@import "components/links";
 
 //Modules
+@import "modules/navigation";
 
 //Hamburger Menu
 

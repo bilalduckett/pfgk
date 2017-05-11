@@ -2,10 +2,18 @@
         COLORS
    =============== */
 
+$color-blue: #0169A6;
+$color-red: #D8232A;
+$color-gray-light: #ABACAA;
+$color-gray-dark: #7F7F7F;
+$color-black: #000000;
+$color-white: #ffffff;
+
 /* ===============
         FONTS
    =============== */
-
+$font-sans-serif: 'Roboto', sans-serif;
+$font-serif: 'Roboto Slab', serif;
 
 /* ===============
        EASING
@@ -45,7 +53,7 @@ $ease-in-out-back: cubic-bezier(0.680, -0.550, 0.265, 1.550);
    =============== */
 $transition-button: all .3s $ease-in-out-cubic;
 $transition-link: all .2s $ease-in-out-quad;
-$transition-dropdown: max-height .4s ease-in-out;
+$transition-dropdown: all .4s ease-in-out;
 $transition-modal-in: all .5s $ease-out-back;
 $transition-modal-out: all .4s $ease-in-quad;
 $transition-copy-reveal: .3s cubic-bezier(0.77, 0, 0.175, 1);
@@ -69,4 +77,4 @@ $link-hover-decoration: none;
        HEIGHTS
    =============== */
 $header-height: 10rem;
-$footer-height: 27rem;
+$footer-height: 30rem;

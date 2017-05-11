@@ -1,0 +1,74 @@
+@mixin h1() {
+	font-family: $font-sans-serif;
+	font-size: 4.8rem;
+	font-weight: 900;
+	letter-spacing: 0;
+	text-transform: uppercase;
+
+	@include mq($until: md) {
+		font-size: 3.6rem;
+	}
+}
+
+@mixin h2() {
+	font-family: $font-sans-serif;
+	font-size: 2.4rem;
+	font-weight: 900;
+	letter-spacing: 0;
+	font-style: italic;
+
+	@include mq($until: md) {
+		font-size: 1.8rem;
+	}
+}
+
+@mixin h3() {
+	font-family: $font-serif;
+	font-size: 1.4rem;
+	letter-spacing: 0;
+}
+
+@mixin body() {
+	font-family: $font-sans-serif;
+	font-size: 1.6rem;
+	letter-spacing: 0;
+	line-height: 1.9rem;
+}
+
+@mixin nav() {
+	font-family: $font-sans-serif;
+	font-size: 1.4rem;
+	font-weight: 500;
+	letter-spacing: 0;
+
+	@include mq($until: md) {
+		font-size: 1.8rem;
+	}
+}
+
+@mixin label() {
+	font-family: $font-sans-serif;
+	font-size: 1.2rem;
+	letter-spacing: 0;
+}
+
+@mixin button() {
+	font-family: $font-serif;
+	font-size: 1.4rem;
+	font-weight: 700;
+	letter-spacing: 0;
+}
+
+h1, .h1 { @include h1() }
+
+h2, .h2 { @include h2() }
+
+h3, .h3 { @include h3() }
+
+body, p { @include body() }
+
+nav, .nav { @include nav() }
+
+label, .date { @include label() }
+
+button, .button, a .button { @include button() }

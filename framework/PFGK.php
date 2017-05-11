@@ -123,7 +123,7 @@
 //      wp_enqueue_script('headroom', self::asset("node_modules/headroom.js/dist/headroom.min.js"), ['jquery'], '1.0.0', ' all');
 //      wp_enqueue_script('prettyPhoto', self::asset("js/vendor/jquery.prettyPhoto.js"), ['jquery'], '1.0.0', ' all');
 //			wp_enqueue_script('navigo', self::asset("node_modules/navigo/lib/navigo.min.js"), ['jquery'], '1.0.0', ' all')\;
-//			wp_enqueue_script('app', self::asset("js/app.min.js"), ['jquery'], '1.0.0', ' all');
+			wp_enqueue_script('app', self::asset("js/app.min.js"), ['jquery'], '1.0.0', ' all');
 		}
 
 		/**

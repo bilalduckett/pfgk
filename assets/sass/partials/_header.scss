@@ -1,0 +1,42 @@
+header, .header {
+	height: $header-height;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: fixed;
+	z-index: 99;
+	background-color: $color-white;
+	width: 100%;
+	transition: $transition-dropdown;
+
+	@include mq($until: md) {
+		height: 11rem;
+		padding-top: 2rem;
+		overflow: hidden;
+		justify-content: flex-start;
+	}
+}
+
+.header__nav {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+
+.header__cart {
+	width: 3.4rem;
+	margin-bottom: 2rem;
+
+	@include mq($until: md) {
+		order: 2;
+		position: relative;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+}
+
+.menu-reveal { height: 48rem; }
+
+.nav-main { width: 100% }

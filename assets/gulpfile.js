@@ -58,7 +58,7 @@ gulp.task('browser-sync', function () {
 gulp.task('js', function () {
 	let js = gulp.src([
 		// 'js/source/Carousel.js',
-		// 'js/source/Nav.js',
+		'js/source/Nav.js',
 	])
 			.pipe(sourcemaps.init())
 			.pipe(babel({

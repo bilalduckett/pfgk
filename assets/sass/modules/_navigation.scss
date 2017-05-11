@@ -1,0 +1,30 @@
+
+.navigation__list {
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	justify-content: flex-end;
+	
+	@include mq($until: md) {
+		flex-direction: column;
+		padding-left: 0;
+		padding-top: 4.5rem;
+	}
+}
+
+.navigation__item {
+	margin-left: 4rem;
+	a {
+		color: $color-gray-dark;
+
+		&:hover { color: $color-blue }
+	}
+
+	@include mq($until: md) {
+		margin-left: 0;
+		margin-bottom: 1.5rem;
+		padding-bottom: 1.5rem;
+		border-bottom: solid .1rem $color-gray-dark;
+		&:nth-last-child(1){border-bottom: none}
+	}
+}

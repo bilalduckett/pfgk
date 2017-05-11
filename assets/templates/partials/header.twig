@@ -1,5 +1,29 @@
 <div class="page-wrapper">
 	<header class="header" id="myHeader">
 		<div class="container">
+			<div class="row">
+				<div class="col-6">
+					<a href="{{ site.url }}" rel="home">
+						<span class="header__logo">
+							{% include 'logo-mark__blue.svg' %}
+						</span>
+					</a>
+				</div>
+				<div class="col-6 hidden-md-up">
+					<button id="myMenu" class="hamburger hamburger--elastic" type="button" onclick="toggleClass()">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+					</button>
+				</div>
+				<div class="col-xs-12 col-md-6 header__nav">
+					<a href="{{ site.url }}" rel="home" class="header__cart">
+							{% include 'shopping-cart__gray.svg' %}
+					</a>
+					<nav class="nav-main" role="navigation">
+						{% include "navigation.twig" with {'menu': menu.get_items} %}
+					</nav>
+				</div>
+			</div>
 		</div>
 	</header>

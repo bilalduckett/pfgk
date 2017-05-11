@@ -1,0 +1,19 @@
+{% if menu %}
+	<ul class="navigation__list">
+		{% for item in menu %}
+			<li class="{{ item.classes | join(' ') }} navigation__item">
+				<a href="{{ item.link }}">{{ item.title }}</a>
+
+				{% if item.get_children %}
+					<ul class="navigation__sub-list">
+						{% for subItem in item.get_children %}
+							<li class="{{ subItem.classes | join(' ') }} navigation__sub-item">
+								<a href="{{ subItem.get_link }}">{{ subItem.title }}</a>
+							</li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+			</li>
+		{% endfor %}
+	</ul>
+{% endif %}
