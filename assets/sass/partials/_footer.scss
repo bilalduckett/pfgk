@@ -1,4 +1,48 @@
-footer, .footer, #footer{
+footer, .footer, #footer {
 	height: $footer-height;
 	background-color: $color-gray-light;
+	padding: 3.5rem;
+
+	@include mq($until: md) {
+		padding: 1.5rem;
+	}
+}
+
+.footer__logo svg { width: 100%; }
+
+.footer-social {
+	padding: 0;
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 2rem;
+}
+
+.footer-social__item {
+	display: inline-block;
+}
+
+.footer__menu {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.footer__cart {
+	@extend .header__cart;
+	padding-top: 2rem;
+
+
+	@include mq($from: md) {
+		padding-left: 3rem;
+		top: .75rem;
+	}
+}
+
+.nav-footer ul li a { color: $color-white }
+
+.footer__copyright{
+	text-align: center;
+	padding-top: 2rem;
+	color: $color-white;
 }

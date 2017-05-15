@@ -1,5 +1,32 @@
 </div>
 
 <footer id="footer" class="footer">
-
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-md-4">
+				<a href="{{ site.url }}" rel="home">
+						<span class="footer__logo">
+							{% include 'logo__white.svg' %}
+						</span>
+				</a>
+				<ul class="footer-social">
+					<li class="footer-social__item"><a href="#">{% include 'instagram.svg' %}</a></li>
+					<li class="footer-social__item"><a href="#">{% include 'twitter.svg' %}</a></li>
+					<li class="footer-social__item"><a href="#">{% include 'facebook.svg' %}</a></li>
+					<li class="footer-social__item"><a href="#">{% include 'email.svg' %}</a></li>
+				</ul>
+			</div>
+			<div class="col-md-8 footer__menu">
+				<nav class="nav-footer hidden-sm-down" role="navigation">
+					{% include "navigation.twig" with {'menu': menu.get_items} %}
+				</nav>
+				<a href="{{ site.url }}" rel="home" class="footer__cart">
+					{% include 'shopping-cart__white.svg' %}
+				</a>
+			</div>
+			<div class="col-12 footer__copyright">
+				&copy; {{ now|date('Y') }} Prime Focus Goalkeeping
+			</div>
+		</div>
+	</div>
 </footer>
