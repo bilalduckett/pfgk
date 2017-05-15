@@ -1,0 +1,15 @@
+.masthead{
+	background: $color-blue;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 3rem;
+	text-align: center;
+	color: $color-white;
+
+	h3{padding: 3rem;}
+}
+
+.masthead__logo svg{
+	max-width: 100%;
+}
