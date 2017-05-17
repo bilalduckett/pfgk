@@ -2,19 +2,14 @@
 
 {% block content %}
 
-	<div class="masthead">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-xs-12 col-md-6">
-						<span class="masthead__logo">
-							{% include 'logo__gray.svg' %}
-						</span>
-					<h3>A goalkeeper specific brand dedicated to  providing top quality gloves and apparel at an affordable cost  </h3>
-					<a href="/about"><button class="button button--white">About Us</button></a>
-				</div>
-			</div>
-		</div>
-	</div>
+	{# MASTHEAD #}
+	{% include "masthead.twig" %}
+
+	{# FEATURED PAGES #}
+	{% include "featured-pages.twig" %}
+
+	{# TAGLINE #}
+	{% include "tagline.twig" %}
 
 	{# PAGE MODULES #}
 	{#{% include "page-modules.twig" %}#}

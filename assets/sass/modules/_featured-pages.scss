@@ -1,0 +1,45 @@
+.featured-pages{
+
+}
+
+.featured-pages__link{
+	@include make-col(6);
+	padding: 1rem;
+	
+	@include mq($until: md) {
+		@include make-col(12);
+	}
+
+	&--large{
+		@include make-col(12);
+		padding: 1rem;
+	}
+}
+
+.featured-pages__img{
+	background-size: cover;
+}
+
+.featured-pages__wrapper{
+	height: 30rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(127,127,127,0.65);
+	transition: $transition-link;
+
+	&:hover{
+		background: $color-blue;
+
+		h1:after {
+			margin: 2rem auto;
+		}
+	}
+
+	h1 {
+		@include underline--center();
+		color: $color-white;
+
+		&:after{transition: $transition-link;}
+	}
+}

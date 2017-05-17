@@ -1,0 +1,8 @@
+.section{
+
+}
+
+.section__header {
+	@extend .tagline;
+	@include underline--center();
+}
