@@ -10,3 +10,16 @@
 		width: 6.5rem;
 	}
 }
+
+@mixin underline--long() {
+	&:after {
+		content: " ";
+		background-color: $color-blue;
+		display: block;
+		left: 0;
+		right: 0;
+		//margin: 1rem auto;
+		height: .3rem;
+		width: 100%;
+	}
+}

@@ -1,0 +1,35 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	{% include "shop-sub-header.twig" %}
+
+	{#{% do action('woocommerce_before_main_content') %}#}
+
+	{#<div class="before-shop-loop">#}
+		{#{% do action( 'woocommerce_before_shop_loop') %}#}
+	{#</div>#}
+
+	{#<div class="loop">#}
+
+	<div class="container">
+		<div class="row">
+
+			{% for post in products %}
+
+				{% include ["woo/tease-product.twig"] %}
+
+			{% endfor %}
+
+		</div>
+	</div>
+
+	{#</div>#}
+
+	{#{% do action('woocommerce_after_shop_loop') %}#}
+	{#{% do action('woocommerce_after_main_content') %}#}
+
+	{% include "tagline.twig" %}
+
+{% endblock  %}
+

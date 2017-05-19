@@ -1,0 +1,26 @@
+.tease-product {
+	@include underline--long();
+	article { display: flex }
+}
+
+.tease-product__link {
+	margin: 2rem;
+}
+
+.tease-product__img {
+	max-width: 100%;
+	padding: 2rem;
+}
+
+.tease-product__content {
+	text-align: right;
+	color: $color-gray-black;
+}
+
+.tease-product__title {
+	padding-bottom: 1.5rem;
+}
+
+.price {
+	font-size: 3.6rem;
+}

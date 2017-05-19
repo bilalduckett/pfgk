@@ -1,0 +1,35 @@
+<div class="col-xs-12 col-md-4 tease-product">
+	<article {{ fn('post_class', ['$classes', 'entry'] ) }}>
+
+		{#{{ fn('timber_set_product', post)}}#}
+
+		<a href="{{ post.link }}" class="tease-product__link">
+
+			{#{% if showthumb %}#}
+				{#<div class="Media-figure {% if not post.thumbnail %}placeholder{% endif %}">#}
+						{#{% if post.thumbnail %}#}
+							{#<img src="{{ post.thumbnail.src|resize(post_thumb_size[0], post_thumb_size[1]) }}" class="tease-product__img"/>#}
+						{#{% else %}#}
+							{#<span class="thumb-placeholder"><i class="icon-camera"></i></span>#}
+						{#{% endif %}#}
+				{#</div>#}
+			{#{% endif %}#}
+
+			{#<div class="Media-content">#}
+				{#{% do action('woocommerce_before_shop_loop_item_title') %}#}
+				{% if post.thumbnail %}
+					<img src="{{ post.thumbnail.src|resize(shop_thumbnail_image_size) }}" class="tease-product__img" />
+				{% endif %}
+				<div class="tease-product__content">
+					{% if post.title %}
+						<h4 class="tease-product__title">{{ post.title }}</h4>
+					{% endif %}
+					{% do action( 'woocommerce_after_shop_loop_item_title' ) %}
+				</div>
+				{#{% do action( 'woocommerce_after_shop_loop_item' ) %}#}
+			{#</div>#}
+
+		</a>
+
+	</article>
+</div>

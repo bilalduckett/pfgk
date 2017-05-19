@@ -26,6 +26,11 @@
 			add_action('wp_enqueue_scripts', [$this, 'enqueueScripts']);
 			add_action('wp_print_styles', [$this, 'enqueueStyles']);
 			add_action('init', [$this, 'registerSidebars']);
+      add_action( 'after_setup_theme', 'woocommerce_support' );
+      function woocommerce_support() {
+        add_theme_support( 'woocommerce' );
+      }
+      remove_action('woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail');
 			//add_action( 'admin_init', [$this, 'hideEditor'] );
 
 //			require_once(__DIR__ . '/widgets/FooterSocialWidget.php');
