@@ -1,6 +1,11 @@
 .tease-product {
 	@include underline--long();
-	article { display: flex }
+	article {
+		display: flex;
+		transition: $transition-link;
+
+		&:hover{ padding-bottom: 1rem; }
+	}
 }
 
 .tease-product__link {

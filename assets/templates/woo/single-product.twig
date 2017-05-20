@@ -2,25 +2,40 @@
 
 {% block content %}
 
-	{% do action('woocommerce_before_single_product') %}
+	{#{% do action('woocommerce_before_single_product') %}#}
 
-	<article itemscope itemtype="http://schema.org/Product" class="single-product-details {{post.class}}">
+	<div class="container">
+		<div class="row single-product__content">
+			{#<article itemscope itemtype="http://schema.org/Product" class="single-product-details {{post.class}}">#}
 
-		<div class="entry-images">
-			{% do action('woocommerce_before_single_product_summary') %}
-			<img src="{{ post.thumbnail.src('shop_single') }}" />
+				<div class="col-xs-12 col-md-4 push-md-1">
+					{#{% do action('woocommerce_before_single_product_summary') %}#}
+					<h4 class="hidden-md-up">{{ post.title }}</h4>
+					<img src="{{ post.thumbnail.src('shop_single') }}" />
+				</div>
+
+				<div class="col-xs-12 col-md-5 push-md-2">
+					<div class="summary entry-summary">
+						{% do action('woocommerce_single_product_summary') %}
+					</div>
+				</div>
+
+				{#{% do action('woocommerce_after_single_product_summary') %}#}
+
+				<meta itemprop="url" content="{{ post.link }}" />
+
+			{#</article>#}
+
 		</div>
-
-		<div class="summary entry-summary">
-			{% do action('woocommerce_single_product_summary') %}
+		<div class="row">
+			<div class="col-12">{{ post.content }}</div>
 		</div>
+	</div>
 
-		{% do action('woocommerce_after_single_product_summary') %}
+	{#{% do action('woocommerce_after_single_product') %}#}
 
-		<meta itemprop="url" content="{{ post.link }}" />
 
-	</article>
-
-	{% do action('woocommerce_after_single_product') %}
+	{# TAGLINE #}
+	{% include "tagline.twig" %}
 
 {% endblock  %}
