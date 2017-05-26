@@ -1,0 +1,14 @@
+.tease-post{
+	@include overline--left();
+
+
+}
+
+.tease-post__link{}
+
+.tease-post__title{}
+
+.tease-post__img{
+	max-width: 100%;
+	opacity: .8;
+}

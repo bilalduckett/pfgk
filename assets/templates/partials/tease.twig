@@ -1,0 +1,15 @@
+{% block content %}
+
+	<div class="col-xs-12 col-md-4 tease-post">
+
+		<a href="{{ post.link }}" class="tease-post__link">
+			<h2 class="tease-post__title">{{ post.title }}</h2>
+			<label>{{ post.date }}</label>
+			{% if post.thumbnail %}
+				<img src="{{ post.thumbnail.src}}" class="tease-post__img"/>
+			{% endif %}
+		</a>
+
+	</div>
+
+{% endblock %}

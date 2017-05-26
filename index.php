@@ -25,8 +25,8 @@
 
   $templates         = ['index.twig'];
 
-  if(is_home()) {
-    array_unshift($templates, 'template-home.twig');
-  }
+//  if(is_home()) {
+//    array_unshift($templates, 'template-home.twig');
+//  }
 
   Timber::render($templates, $context);
